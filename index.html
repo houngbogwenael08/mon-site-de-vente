@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉLYSÉE JETS — Jets Privés de Luxe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        :root {
+            --gold: #d4af37;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .jet-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .jet-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 30px 60px -15px rgb(212 175 55 / 0.3);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .gold-button {
+            background: linear-gradient(45deg, #d4af37, #f5e8b3);
+            color: #111827;
+            transition: all 0.3s ease;
+        }
+        
+        .gold-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -10px rgb(212 175 55);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8 py-6 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-plane text-black text-2xl"></i>
+                </div>
+                <div>
+                    <span class="heading-font text-3xl tracking-tighter font-bold text-white">ÉLYSÉE</span>
+                    <span class="text-amber-400 text-sm tracking-[4px] block -mt-1">JETS</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-x-10 text-sm uppercase tracking-widest">
+                <a href="#" class="nav-link hover:text-amber-400">Jets</a>
+                <a href="#" class="nav-link hover:text-amber-400">Expériences</a>
+                <a href="#" class="nav-link hover:text-amber-400">Destinations</a>
+                <a href="#" class="nav-link hover:text-amber-400">À Propos</a>
+                <a href="#" class="nav-link hover:text-amber-400">Contact</a>
+            </div>
+            
+            <div class="flex items-center gap-x-6">
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                        class="px-8 py-4 text-sm font-medium border border-amber-400 hover:bg-amber-400 hover:text-black transition-all rounded-full">
+                    Demander une consultation
+                </button>
+                <button class="md:hidden">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg h-screen flex items-center relative">
+        <div class="max-w-screen-2xl mx-auto px-8 pt-20">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-full mb-8 border border-white/20">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-sm uppercase tracking-widest">Disponible immédiatement</span>
+                </div>
+                
+                <h1 class="heading-font text-7xl md:text-8xl leading-none font-light tracking-tighter mb-6">
+                    L'ART DE<br>VOYAGER<br><span class="text-amber-400">EN PRIVÉ</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 max-w-md mb-12">
+                    Découvrez une collection exclusive de jets privés d'exception. 
+                    Performance, confort et raffinement absolu.
+                </p>
+                
+                <div class="flex flex-wrap gap-5">
+                    <button onclick="document.getElementById('jets').scrollIntoView({ behavior: 'smooth' })" 
+                            class="gold-button px-10 py-5 rounded-2xl text-lg font-semibold flex items-center gap-x-3">
+                        Découvrir nos jets
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                            class="px-10 py-5 border border-white/50 hover:border-white rounded-2xl text-lg font-medium transition-all">
+                        Réserver un vol découverte
+                    </button>
+                </div>
+                
+                <div class="mt-16 flex items-center gap-x-12 text-sm">
+                    <div>
+                        <div class="text-amber-400 text-4xl font-light">47</div>
+                        <div class="text-gray-400">Jets en stock</div>
+                    </div>
+                    <div>
+                        <div class="text-amber-400 text-4xl font-light">18</div>
+                        <div class="text-gray-400">Pays desservis</div>
+                    </div>
+                    <div>
+                        <div class="text-amber-400 text-4xl font-light">99.8%</div>
+                        <div class="text-gray-400">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-2 text-xs tracking-widest">
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+            <span class="text-white/60">SCROLL</span>
+        </div>
+        
+        <!-- Jet badge -->
+        <div class="absolute bottom-12 right-12 bg-black/70 backdrop-blur-xl px-6 py-4 rounded-3xl border border-amber-400/30 flex items-center gap-x-4">
+            <div class="text-right">
+                <div class="text-xs text-amber-400">Gulfstream G700</div>
+                <div class="font-medium">En vol d'essai aujourd'hui</div>
+            </div>
+            <i class="fa-solid fa-plane text-4xl text-amber-400"></i>
+        </div>
+    </section>
+
+    <!-- FEATURED JETS -->
+    <section id="jets" class="py-28 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span class="uppercase text-amber-400 text-sm tracking-[3px]">Collection 2026</span>
+                    <h2 class="heading-font text-6xl tracking-tighter">Jets d'exception</h2>
+                </div>
+                <a href="#" class="flex items-center gap-x-3 group text-sm uppercase tracking-widest hover:text-amber-400">
+                    Voir toute la flotte
+                    <span class="block w-8 h-px bg-white group-hover:bg-amber-400 transition-colors"></span>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Jet 1 -->
+                <div class="jet-card bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
+                    <div class="h-80 bg-cover bg-center relative" style="background-image: url('https://picsum.photos/id/1015/800/600')">
+                        <div class="absolute top-6 right-6 bg-black/70 px-4 py-2 rounded-2xl text-xs backdrop-blur">
+                            Gulfstream G700
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <div class="text-2xl font-semibold">G700</div>
+                                <div class="text-gray-400 text-sm">13 passagers • 13 890 km</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-amber-400 font-medium">Dès 78M €</div>
+                            </div>
+                        </div>
+                        <button onclick="alert('Demande de renseignements envoyée (démo)')" 
+                                class="w-full py-4 border border-amber-400/30 hover:bg-amber-400 hover:text-black rounded-2xl text-sm tracking-wider transition-all">
+                            EXPLORER CE JET
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Jet 2 -->
+                <div class="jet-card bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
+                    <div class="h-80 bg-cover bg-center relative" style="background-image: url('https://picsum.photos/id/201/800/600')">
+                        <div class="absolute top-6 right-6 bg-black/70 px-4 py-2 rounded-2xl text-xs backdrop-blur">
+                            Bombardier Global 7500
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <div class="text-2xl font-semibold">Global 7500</div>
+                                <div class="text-gray-400 text-sm">19 passagers • 14 260 km</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-amber-400 font-medium">Dès 92M €</div>
+                            </div>
+                        </div>
+                        <button onclick="alert('Demande de renseignements envoyée (démo)')" 
+                                class="w-full py-4 border border-amber-400/30 hover:bg-amber-400 hover:text-black rounded-2xl text-sm tracking-wider transition-all">
+                            EXPLORER CE JET
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Jet 3 -->
+                <div class="jet-card bg-zinc-950 rounded-3xl overflow-hidden border border-white/5">
+                    <div class="h-80 bg-cover bg-center relative" style="background-image: url('https://picsum.photos/id/133/800/600')">
+                        <div class="absolute top-6 right-6 bg-black/70 px-4 py-2 rounded-2xl text-xs backdrop-blur">
+                            Dassault Falcon 10X
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <div class="text-2xl font-semibold">Falcon 10X</div>
+                                <div class="text-gray-400 text-sm">16 passagers • 12 500 km</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-amber-400 font-medium">Dès 68M €</div>
+                            </div>
+                        </div>
+                        <button onclick="alert('Demande de renseignements envoyée (démo)')" 
+                                class="w-full py-4 border border-amber-400/30 hover:bg-amber-400 hover:text-black rounded-2xl text-sm tracking-wider transition-all">
+                            EXPLORER CE JET
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="py-28 bg-black relative">
+        <div class="max-w-screen-2xl mx-auto px-8 grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <img src="https://picsum.photos/id/866/1200/800" alt="Intérieur jet" 
+                     class="rounded-3xl shadow-2xl">
+            </div>
+            <div class="space-y-10">
+                <div class="uppercase text-amber-400 tracking-[3px] text-sm">L'expérience Élysée</div>
+                <h2 class="heading-font text-6xl leading-tight tracking-tighter">
+                    Le luxe n'est pas une option,<br>il est la norme.
+                </h2>
+                <div class="space-y-8 text-lg text-gray-300">
+                    <div class="flex gap-6">
+                        <i class="fa-solid fa-crown text-3xl text-amber-400 mt-1"></i>
+                        <div>
+                            <div class="font-semibold text-xl mb-1">Cabines sur-mesure</div>
+                            <p class="text-gray-400">Designé par les plus grands noms du luxe français et italien.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <i class="fa-solid fa-wifi text-3xl text-amber-400 mt-1"></i>
+                        <div>
+                            <div class="font-semibold text-xl mb-1">Connectivité 5G ultra-rapide</div>
+                            <p class="text-gray-400">Travaillez ou détendez-vous comme si vous étiez au sol.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <i class="fa-solid fa-utensils text-3xl text-amber-400 mt-1"></i>
+                        <div>
+                            <div class="font-semibold text-xl mb-1">Gastronomie à bord</div>
+                            <p class="text-gray-400">Menus créés par des chefs étoilés Michelin.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="gold-button px-12 py-6 rounded-3xl text-lg font-medium flex items-center gap-x-4">
+                    Découvrir nos services
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-28 bg-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <h2 class="heading-font text-5xl text-center tracking-tighter mb-16">Ils nous ont fait confiance</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10">
+                    <div class="text-amber-400 mb-6">★★★★★</div>
+                    <p class="italic text-gray-300 mb-8">"Le service est d'une rare élégance. Mon G700 a été livré en moins de 3 mois. Un vrai partenaire de confiance."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-2xl"></div>
+                        <div>
+                            <div class="font-medium">M. Laurent Moreau</div>
+                            <div class="text-sm text-gray-500">PDG — Moreau Group</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10">
+                    <div class="text-amber-400 mb-6">★★★★★</div>
+                    <p class="italic text-gray-300 mb-8">"L'expérience de vol est incomparable. Le niveau de discrétion et de personnalisation est exactement ce que je recherchais."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-2xl"></div>
+                        <div>
+                            <div class="font-medium">S.A.R. Princesse Aïcha</div>
+                            <div class="text-sm text-gray-500">Membre de famille royale</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-zinc-950 p-8 rounded-3xl border border-white/10">
+                    <div class="text-amber-400 mb-6">★★★★★</div>
+                    <p class="italic text-gray-300 mb-8">"De la première prise de contact à la maintenance, tout est géré avec un professionnalisme exceptionnel."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-2xl"></div>
+                        <div>
+                            <div class="font-medium">Elena Rossi</div>
+                            <div class="text-sm text-gray-500">Fondatrice — Rossi Luxury</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section id="contact" class="py-32 bg-gradient-to-br from-zinc-950 to-black border-t border-b border-amber-400/20">
+        <div class="max-w-2xl mx-auto text-center px-8">
+            <h2 class="heading-font text-6xl tracking-tighter mb-8">Prêt à prendre de la hauteur ?</h2>
+            <p class="text-xl text-gray-400 mb-12">Nos conseillers experts vous accompagnent pour trouver le jet qui correspond parfaitement à votre style de vie.</p>
+            
+            <form class="space-y-6 max-w-md mx-auto">
+                <input type="text" placeholder="Votre nom" 
+                       class="w-full bg-white/5 border border-white/20 rounded-2xl px-8 py-6 focus:outline-none focus:border-amber-400">
+                <input type="email" placeholder="Email professionnel" 
+                       class="w-full bg-white/5 border border-white/20 rounded-2xl px-8 py-6 focus:outline-none focus:border-amber-400">
+                <button type="button" onclick="alert('Merci ! Un conseiller vous contactera sous 24h (démo)')" 
+                        class="w-full gold-button py-7 rounded-3xl text-xl font-medium">
+                    Commencer ma consultation privée
+                </button>
+            </form>
+            
+            <p class="text-xs text-gray-500 mt-8">Confidentialité absolue • Réponse sous 24 heures</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-20 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between gap-12">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center">
+                            <i class="fa-solid fa-plane text-black"></i>
+                        </div>
+                        <span class="heading-font text-3xl tracking-tighter">ÉLYSÉE JETS</span>
+                    </div>
+                    <p class="text-gray-500 max-w-xs">Le nec plus ultra du voyage aérien privé en Europe et dans le monde.</p>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-x-16">
+                    <div>
+                        <div class="uppercase text-xs tracking-widest mb-6 text-gray-400">Navigation</div>
+                        <div class="space-y-3 text-sm">
+                            <div>Notre flotte</div>
+                            <div>Services</div>
+                            <div>Financement</div>
+                            <div>Maintenance</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uppercase text-xs tracking-widest mb-6 text-gray-400">Entreprise</div>
+                        <div class="space-y-3 text-sm">
+                            <div>À propos</div>
+                            <div>Nos valeurs</div>
+                            <div>Carrières</div>
+                            <div>Presse</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uppercase text-xs tracking-widest mb-6 text-gray-400">Contact</div>
+                        <div class="space-y-3 text-sm">
+                            <div>+33 1 42 68 00 00</div>
+                            <div>contact@elyseejets.com</div>
+                            <div>Paris • Monaco • Dubaï</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 pt-8 border-t border-white/10 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>© 2026 Élysée Jets — Tous droits réservés</div>
+                <div class="flex gap-x-6">
+                    <div>Confidentialité</div>
+                    <div>Conditions générales</div>
+                    <div>© Site créé pour démonstration</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included
+        console.log("%cÉLYSÉE JETS - Page d'accueil prête", "color: #d4af37; font-family: monospace");
+    </script>
+</body>
+</html>
